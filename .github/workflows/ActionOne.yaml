@@ -1,5 +1,5 @@
 name: action-one
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
   test: # names the job
     runs-on: ubuntu-latest # sets the version of linux we want to use, should be what you have on your server
