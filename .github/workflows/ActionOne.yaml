@@ -18,11 +18,10 @@ jobs:
       - name: Deploy to AWS Ubuntu
         uses: appleboy/ssh-action@master # An action made to control Linux servers
         with: # We set all our secrets here for the action, these won't be shown in the action logs
-          with:
-            host: ${{ secrets.TEST_HOST }}
-            username: ${{ secrets.TEST_USERNAME }}
-            key: ${{ secrets.TEST_KEY }}
-            passphrase: ${{ secrets.TEST_KEY_PASS }}
+          host: ${{ secrets.TEST_HOST }}
+          username: ${{ secrets.TEST_USERNAME }}
+          key: ${{ secrets.TEST_KEY }}
+          passphrase: ${{ secrets.TEST_KEY_PASS }}
           script: whoami #|
             #cd <your-app-folder> # we move into our app's folder
             #git pull # we pull any changes from git
